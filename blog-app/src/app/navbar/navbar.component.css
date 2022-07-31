@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+   /* position: fixed;*/
+    /*width: 95%;*/
+    height: 5%;
+    background-color: #212529;
+    justify-content: space-between;
+}
+
+.navbar-brand{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
+    padding: 5px;
+    background-color: gray;
+}
+.right-side-controlls{
+    display: flex;
+    align-items: stretch;
+    color: white;
+}
+.right-side-controlls a{
+    padding: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-left: 1px solid darkgray;
+}

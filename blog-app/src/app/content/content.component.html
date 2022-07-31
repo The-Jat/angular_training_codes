@@ -1,0 +1,21 @@
+<!--<ng-template [ngIf]="showAllBlogs()" [ngIfElse]="particularBlog">
+    <app-all-blogs></app-all-blogs>
+  </ng-template>
+  
+  <ng-template #particularBlog>
+    <app-blog-view></app-blog-view>
+</ng-template>-->
+<ng-template [ngIf]="showAllBlogs()" [ngIfElse]="particularBlog">
+  <div class="all-blogs-container">
+    <app-all-blogs-left></app-all-blogs-left>
+    <app-blog-categories></app-blog-categories>
+    <!--<div class="pagination"> pagination thing
+    </div>
+-->
+  </div>
+</ng-template>
+
+<ng-template #particularBlog>
+  <app-blog-view></app-blog-view>
+  <app-blog-categories></app-blog-categories>
+</ng-template>

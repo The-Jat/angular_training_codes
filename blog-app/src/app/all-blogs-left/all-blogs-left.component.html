@@ -1,0 +1,70 @@
+<!--<div>
+    <div class="blogs">
+        <div class="blogs-list">
+            <div class="blog-list-left"></div>
+            <div class="blog-list-right">
+                <div class="blog-list-right-title">{{blog_data.title}}
+                </div>
+                <div class="blog-list-right-category"> blog1 categories</div>
+                <div class="blog-list-right-description">blog1 description</div>
+            </div>
+        </div>
+        <div class="blogs-list">
+            <div class="blog-list-left">left</div>
+            <div class="blog-list-right">right</div>
+        </div>
+        <div class="blogs-list">
+            <div class="blog-list-left">left</div>
+            <div class="blog-list-right">right</div>
+        </div>
+        <div class="blogs-list">
+            <div class="blog-list-left">left</div>
+            <div class="blog-list-right">right</div>
+        </div>
+        <div class="blogs-list">
+            <div class="blog-list-left">left</div>
+            <div class="blog-list-right">right</div>
+        </div>
+    </div>
+</div>
+-->
+<div>
+    <div class="blogs" *ngFor="let data of blog_data | paginate: { itemsPerPage: 5, currentPage: p }" >
+        <div class="blogs-list" (click)="funcNotImplemented(data)" [routerLink]="['blog-id', data.id]" >
+            <div class="blog-list-left">
+                <img class="blog-img" src="{{data.imgPath}}">
+            </div>
+            <div class="blog-list-right">
+                <div class="blog-list-right-title">{{data.title}}
+                </div>
+                <div>
+                    <small style="float:left; padding-left:10px;">{{data.postingDate}}</small>
+                    <div class="blog-list-right-category" style="float:right; padding-right: 10px;"> blog1 categories</div>
+                </div>
+                <div class="blog-list-right-description" style="padding-left:10px;">blog1 description</div>
+                <small style="float:right;">read more...</small>
+            </div>
+        </div>
+        
+        <!--<div class="blogs-list">
+            <div class="blog-list-left">left</div>
+            <div class="blog-list-right">right</div>
+        </div>
+        <div class="blogs-list">
+            <div class="blog-list-left">left</div>
+            <div class="blog-list-right">right</div>
+        </div>
+        <div class="blogs-list">
+            <div class="blog-list-left">left</div>
+            <div class="blog-list-right">right</div>
+        </div>
+        <div class="blogs-list">
+            <div class="blog-list-left">left</div>
+            <div class="blog-list-right">right</div>
+        </div>
+    -->
+    </div>
+    <pagination-controls id="paginator" (pageChange)="p = $event"></pagination-controls>
+</div>
+
+

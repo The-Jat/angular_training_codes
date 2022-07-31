@@ -1,0 +1,12 @@
+*body{
+    margin: 0px!important;
+}
+nav{
+    display: flex;
+    height: 30px;
+    background-color: gray;
+}
+nav div{
+    padding: 5px;
+    margin: 5px;
+}
